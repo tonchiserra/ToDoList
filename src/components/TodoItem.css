@@ -1,0 +1,15 @@
+li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: .4rem 0rem;
+}
+
+.task-checkbox {
+  margin: 0rem .4rem 0rem 0rem;
+}
+
+.strike {
+  text-decoration: line-through;
+}

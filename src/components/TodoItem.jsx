@@ -1,4 +1,5 @@
 import React from 'react';
+import './TodoItem.css';
 
 export function TodoItem({ todo, toggleTodo }){
   const {id, task, completed} = todo;
@@ -9,8 +10,8 @@ export function TodoItem({ todo, toggleTodo }){
 
   return(
     <li>
-      <input type="checkbox" checked={completed} onChange={todoClick}></input>
-      {task}
+      <input className="task-checkbox" type="checkbox" checked={completed} onChange={todoClick}></input>
+      {completed ? <strike>{task}</strike> : task}
     </li>
   );
 }

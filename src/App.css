@@ -1,0 +1,60 @@
+.app-content {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+  padding: 0rem 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: #222222;
+  text-align: center;
+  margin: 1.5rem 0rem 1rem 0rem;
+}
+
+hr {
+  border: 1px solid #e6e6e6;
+  margin: 0;
+}
+
+.add-task-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem 0rem;
+}
+
+.input-add-task {
+  border: 2px solid #e6e6e6;
+  border-radius: 10px;
+  outline: none;
+  height: 3rem;
+  width: 100%;
+  padding: 0rem 1rem;
+  margin-right: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-add-task:hover {
+  border: 2px solid #c2c2c2;
+}
+
+.button-add-task {
+  cursor: pointer;
+  height: 3rem;
+  width: 8rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #4ad37e;
+  color: #ffffff;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-add-task:hover {
+  opacity: .75;
+}
+
+.text-task-to-finish {
+  text-align: center;
+}
