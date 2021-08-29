@@ -3,6 +3,7 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   margin: .4rem 0rem;
 }
 
@@ -12,4 +13,20 @@ li {
 
 .strike {
   text-decoration: line-through;
+}
+
+.button-trash {
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-trash > img {
+  height: 1rem;
+  width: 1rem;
 }

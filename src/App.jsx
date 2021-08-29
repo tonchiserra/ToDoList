@@ -25,10 +25,19 @@ export function App() {
   const toggleTodo = (id) => {
     const newTodos = [...todos];
     const todo = newTodos.find((todo) => todo.id === id);
+
     todo.completed = !todo.completed;
-    //if(todo.completed){
-      //todo.task = "hola".strike()
-    //}
+
+    setTodos(newTodos);
+  }
+
+  const deleteTodo = (id) => {
+    const newTodos = [...todos];
+    const todo = newTodos.find((todo) => todo.id === id);
+
+    let i = newTodos.indexOf(todo);
+    newTodos.splice(i, 1);
+
     setTodos(newTodos);
   }
 
@@ -54,7 +63,7 @@ export function App() {
           <button className="button-add-task" onClick={addTask} >Add</button>
         </div>
 
-        <TodoList todos={todos} toggleTodo={toggleTodo} />
+        <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
 
         <div className="text-task-to-finish">Te quedan {todos.filter((todo) => !todo.completed).length} tareas por terminar</div>
       </section>
