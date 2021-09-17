@@ -1,6 +1,8 @@
 import React from 'react';
-import './TodoItem.css';
 import trash from '../assets/trash.svg';
+import { StyledCheckbox } from './ui/StyledCheckbox.jsx';
+import { ButtonTrash } from './ui/ButtonTrash.jsx';
+import { StyledItem } from './ui/StyledItem.jsx';
 
 export function TodoItem({ todo, toggleTodo, deleteTodo }){
   const {id, task, completed} = todo;
@@ -14,14 +16,14 @@ export function TodoItem({ todo, toggleTodo, deleteTodo }){
   }
 
   return(
-    <li>
+    <StyledItem>
       <div>
-        <input className="task-checkbox" type="checkbox" checked={completed} onChange={todoClick}></input>
+        <StyledCheckbox type="checkbox" checked={completed} onChange={todoClick} />
         {completed ? <strike>{task}</strike> : task}
       </div>
-      <button className="button-trash" onClick={todoTrash}>
+      <ButtonTrash onClick={todoTrash}>
         <img src={trash} alt="x" ></img>
-      </button>
-    </li>
+      </ButtonTrash>
+    </StyledItem>
   );
 }
